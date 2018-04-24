@@ -20,7 +20,9 @@ public class Application {
         formatAllJavaFiles(new File(CURRENT_DIRECTORY));
     }
 
-    private static void formatAllJavaFiles(File currentDirectory) throws IOException, FormatterException {
+    private static void formatAllJavaFiles(File currentDirectory) throws
+        IOException,
+        FormatterException {
         File[] files = currentDirectory.listFiles();
 
         if (files == null) {
@@ -41,6 +43,7 @@ public class Application {
     }
 
     private static void formatFile(File file) throws IOException, FormatterException {
+        System.out.println("Formating file " + file.getName());
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(FORMATTER.formatSource(IOUtils
                 .toString(FileUtils.openInputStream(file), Charset.defaultCharset())).getBytes());
