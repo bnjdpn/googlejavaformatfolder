@@ -1,4 +1,4 @@
-Format all Java files in a folder using Google Java Style
+##### Format all Java files in a folder using Google Java Style
 
 ###### How to use
 + Build program :
